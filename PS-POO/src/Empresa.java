@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class Empresa {
 
 	private HashMap<String, Viagem> viagens = new HashMap<>();
-	ArrayList<Viagem> via = new ArrayList<>(); // para especificar a viagem e pegar o valor arrecadado
+	ArrayList<Viagem> via = new ArrayList<>(); // para especificar a viagem
 	
 	    public ArrayList<Passageiro> getPassageirosMaisVelhos() {
 	        ArrayList<Passageiro> velhos = new ArrayList();
@@ -50,7 +50,6 @@ public class Empresa {
 		for(Viagem v : viagens.values()) {
 			if(Data.equals(v.getDataViagem().toString())) {
 				str = "Viagem encontrada!";
-											// limpa o arraylist para evitar que múltiplas buscas acumulem (na hora de calcular n de passageiros e ociosidade, por ex.).
 				via.add(0, v); 							// coloca a viagem especificada no index 0
 			}
 		}
@@ -63,7 +62,6 @@ public class Empresa {
 		for(Viagem v : viagens.values()) {
 			if(Hora.equals(v.getHoraViagem().toString())) {
 				str = "Viagem encontrada!";
-											// limpa o arraylist para evitar que múltiplas buscas acumulem (na hora de calcular n de passageiros e ociosidade, por ex.).
 				via.add(0, v);							// coloca a viagem especificada no index 0
 			}
 		}
@@ -75,7 +73,6 @@ public class Empresa {
 			if(Placa.equals(v.getPlacaOnibus())) {
 				str = "Viagem encontrada!";
 				System.out.println("s");
-											// limpa o arraylist para evitar que múltiplas buscas acumulem (na hora de calcular n de passageiros e ociosidade, por ex.).
 				via.add(0, v);							// coloca a viagem especificada no index 0
 				
 			}

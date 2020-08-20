@@ -187,7 +187,7 @@ public class Apresentacao extends JFrame {
 		panel_1.add(TFnome);
 		TFnome.setColumns(10);
 		
-		JLabel lblidade = new JLabel("idade:");
+		JLabel lblidade = new JLabel("Idade:");
 		lblidade.setBounds(10, 117, 67, 14);
 		panel_1.add(lblidade);
 		
@@ -306,15 +306,12 @@ public class Apresentacao extends JFrame {
 				String pes = null;
 				System.out.println("s");
 				if(formaPesquisa == "Data") {
-					System.out.println("1");
 					pes = em.Busca(TFBusca.getText());
 					JOptionPane.showMessageDialog(frame, pes);
 				}else if(formaPesquisa == "Hora") {
-					System.out.println("2");
 					pes = em.BuscaHora(TFBusca.getText());			
 					JOptionPane.showMessageDialog(frame, pes);
 				}else if(formaPesquisa == "Placa do Ônibus") {
-					System.out.println("3");
 					pes = em.BuscaPlaca(TFBusca.getText());
 					JOptionPane.showMessageDialog(frame, pes);
 				}
